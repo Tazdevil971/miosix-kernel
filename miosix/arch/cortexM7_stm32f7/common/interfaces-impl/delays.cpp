@@ -32,11 +32,12 @@ namespace miosix {
 void delayMs(unsigned int mseconds)
 {
     //Note: flash wait state don't matter because of icache
-    #ifdef SYSCLK_FREQ_216MHz
-    const unsigned int count=216000;
-    #else
-    #warning "Delays are uncalibrated for this clock frequency"
-    #endif
+    // #ifdef SYSCLK_FREQ_216MHz
+    // const unsigned int count=216000;
+    // #else
+    // #warning "Delays are uncalibrated for this clock frequency"
+    // #endif
+    const unsigned int count=16000;
 
     for(unsigned int i=0;i<mseconds;i++)
     {
@@ -53,13 +54,13 @@ void delayUs(unsigned int useconds)
 {
     // This delay has been calibrated to take x microseconds
     // It is written in assembler to be independent on compiler optimizations
-    #ifdef SYSCLK_FREQ_216MHz
-    asm volatile("    movs  r1, #216   \n"
+    // #ifdef SYSCLK_FREQ_216MHz
+    asm volatile("    movs  r1, #16   \n"
                  "    mul   r1, r1, %0 \n"
                  "    .align 2         \n" //4-byte aligned inner loop
                  "1:  subs  r1, r1, #1 \n"
                  "    bpl   1b         \n"::"r"(useconds):"r1","cc");
-    #endif
+    // #endif
 }
 
 } //namespace miosix

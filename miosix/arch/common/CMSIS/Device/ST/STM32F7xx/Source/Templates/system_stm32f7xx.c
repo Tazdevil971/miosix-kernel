@@ -98,6 +98,7 @@
                                    This value must be a multiple of 0x200. */
 /******************************************************************************/
 
+/*
 // By Alberto Nidasio and TFT -- begin
 #if (HSE_VALUE % 2000000) == 0
 
@@ -127,6 +128,7 @@ const unsigned int PLL_P=2;
 
 #endif // HSE_VALUE divisibility check
 // By Alberto Nidasio and TFT -- end
+*/
 
 /**
   * @}
@@ -153,12 +155,12 @@ const unsigned int PLL_P=2;
                variable is updated automatically.
   */
 //By TFT: we increase the clock BEFORE initializing .data and .bss!
-#ifdef SYSCLK_FREQ_216MHz
+/*#ifdef SYSCLK_FREQ_216MHz
 uint32_t SystemCoreClock = 216000000;
 #else
 #error No clock defined
-#endif
-  //uint32_t SystemCoreClock = 16000000;
+#endif*/
+uint32_t SystemCoreClock = 16000000;
   const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
   const uint8_t APBPrescTable[8] = {0, 0, 0, 0, 1, 2, 3, 4};
 
@@ -216,7 +218,7 @@ void SystemInit(void)
   RCC->CIR = 0x00000000;
   
   //By TFT -- begin
-  SetSysClk();
+  // SetSysClk();
   //NOTE: we don't enable caches here because different boards may want to do
   //so or not depending on whether they have external memories for code and data
   //By TFT -- end
@@ -313,6 +315,7 @@ void SystemCoreClockUpdate(void)
   SystemCoreClock >>= tmp;
 }
 
+#if 0
 //By TFT: added PLL initialization that was not present in the CMSIS code
 void SetSysClk(void)
 {
@@ -407,6 +410,7 @@ void SetSysClk(void)
     } while((tmpreg != RCC_CFGR_SWS) && (timeout-- > 0));
   }   
 }
+#endif
 
 /**
   * @}

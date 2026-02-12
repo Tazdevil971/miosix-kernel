@@ -1,44 +1,36 @@
-#include <cstdio>
-#include <miosix.h>
 
+#include <cstdio>
+#include "miosix.h"
+
+using namespace std;
+using namespace miosix;
+
+using Mco2 = miosix::Gpio<GPIOC_BASE, 9>;
 using Pin = miosix::Gpio<GPIOB_BASE, 0>;
 
 #define DBG(num) do {} while(0)
 // #define DBG(num) printf("%d\n", num)
 
-miosix::FastMutex mutex;
-
 void other(void*) {
     DBG(2);
-    mutex.lock();
-    DBG(3);
     miosix::Thread::yield();
-    DBG(6);
+    DBG(5);
     Pin::low();
-    DBG(7);
-    mutex.unlock();
-    DBG(8);
-    miosix::Thread::yield();
 }
 
 int main() {
+    Mco2::mode(miosix::Mode::ALTERNATE);
+    Mco2::alternateFunction(0);
+
     Pin::mode(miosix::Mode::OUTPUT);
     Pin::speed(miosix::Speed::_100MHz);
-
-    Pin::high();
-    {
-        mutex.lock();
-        mutex.unlock();
-    }
-    Pin::low();
 
     miosix::Thread::create(other, 16 * 1024, miosix::DEFAULT_PRIORITY, nullptr);
     DBG(1);
     miosix::Thread::yield();
+    DBG(3);
+    Pin::high();
     DBG(4);
-    Pin::high();
-    DBG(5);
-    mutex.lock();
-    DBG(9);
-    Pin::high();
+    miosix::Thread::yield();
+    DBG(6);
 }

@@ -282,7 +282,7 @@ const long long DEFAULT_PRIORITY=std::numeric_limits<long long>::max()-2;
 
 #if defined(SCHED_TYPE_PRIORITY) || defined(SCHED_TYPE_EDF)
 /// Maximum thread time slice in nanoseconds, after which preemption occurs
-const unsigned int MAX_TIME_SLICE=1000000;
+const unsigned int MAX_TIME_SLICE=100000000;
 #endif //SCHED_TYPE_PRIORITY
 
 /// \def OS_TIMER_MODEL_UNIFIED

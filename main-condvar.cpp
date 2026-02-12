@@ -6,7 +6,7 @@ using Pin = miosix::Gpio<GPIOB_BASE, 0>;
 #define DBG(num) do {} while(0)
 // #define DBG(num) printf("%d\n", num)
 
-miosix::Mutex mutex;
+miosix::FastMutex mutex;
 miosix::ConditionVariable condvar;
 
 void other(void*) {

@@ -32,7 +32,7 @@
 // The PARSING_FROM_IDE is because Netbeans gets confused by this, it is never
 // defined when compiling the code.
 #ifndef PARSING_FROM_IDE
-#error This error is a reminder that you have not edited miosix_settings.h yet.
+// #error This error is a reminder that you have not edited miosix_settings.h yet.
 #endif //PARSING_FROM_IDE
 
 /**
@@ -246,7 +246,7 @@ const unsigned char MAIN_PRIORITY=1;
 
 #ifdef SCHED_TYPE_PRIORITY
 /// Maximum thread time slice in nanoseconds, after which preemption occurs
-const unsigned int MAX_TIME_SLICE=1000000;
+const unsigned int MAX_TIME_SLICE=100000000;
 #endif //SCHED_TYPE_PRIORITY
 
 

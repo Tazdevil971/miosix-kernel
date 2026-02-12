@@ -6,17 +6,18 @@ using Pin = miosix::Gpio<GPIOB_BASE, 0>;
 #define DBG(num) do {} while(0)
 // #define DBG(num) printf("%d\n", num)
 
-miosix::Mutex mutex;
-miosix::ConditionVariable condvar;
+miosix::FastMutex mutex;
 
 void other(void*) {
     DBG(2);
+    mutex.lock();
+    DBG(3);
     miosix::Thread::yield();
-    DBG(5);
-    Pin::high();
     DBG(6);
-    condvar.signal();
+    Pin::low();
     DBG(7);
+    mutex.unlock();
+    DBG(8);
     miosix::Thread::yield();
 }
 
@@ -24,13 +25,20 @@ int main() {
     Pin::mode(miosix::Mode::OUTPUT);
     Pin::speed(miosix::Speed::_100MHz);
 
+    Pin::high();
+    {
+        mutex.lock();
+        mutex.unlock();
+    }
+    Pin::low();
+
     miosix::Thread::create(other, 16 * 1024, miosix::MAIN_PRIORITY, nullptr);
     DBG(1);
     miosix::Thread::yield();
-    DBG(3);
-    mutex.lock();
     DBG(4);
-    condvar.wait(mutex);
-    DBG(8);
-    Pin::low();
+    Pin::high();
+    DBG(5);
+    mutex.lock();
+    DBG(9);
+    Pin::high();
 }

@@ -83,10 +83,10 @@ void IRQbspInit()
     ledOn();
     delayMs(100);
     ledOff();
-    auto tx=Gpio<GPIOD_BASE,8>::getPin(); tx.alternateFunction(7);
-    auto rx=Gpio<GPIOD_BASE,9>::getPin(); rx.alternateFunction(7);
+    auto tx=Gpio<GPIOA_BASE,9>::getPin(); tx.alternateFunction(7);
+    auto rx=Gpio<GPIOA_BASE,10>::getPin(); rx.alternateFunction(7);
     DefaultConsole::instance().IRQset(intrusive_ref_ptr<Device>(
-        new STM32Serial(3, defaultSerialSpeed, tx, rx)));
+        new STM32Serial(1, defaultSerialSpeed, tx, rx)));
 }
 
 void bspInit2()

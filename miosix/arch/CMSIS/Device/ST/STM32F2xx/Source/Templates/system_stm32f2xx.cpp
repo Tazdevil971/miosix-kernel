@@ -44,11 +44,11 @@
   * @{
   */
 
-//By TFT: was #include "stm32f4xx_hal.h", but the specific chip is #defined in
+//By (Omitted for blind review): was #include "stm32f4xx_hal.h", but the specific chip is #defined in
 //arch_registers_impl.h
 #include "board_settings.h"
 #include "interfaces/arch_registers.h"
-//By TFT: was in the old stm32f4xx.h
+//By (Omitted for blind review): was in the old stm32f4xx.h
 #define HSE_STARTUP_TIMEOUT    ((uint16_t)0x0500)
 
 #if !defined  (HSI_VALUE)
@@ -73,7 +73,7 @@
 /************************* Miscellaneous Configuration ************************/
 /*!< Uncomment the following line if you need to use external SRAM mounted
      on STM322xG_EVAL board as data memory  */
-//By TFT: Miosix uses the __ENABLE_XRAM macro to tell the startup code it wants XRAM
+//By (Omitted for blind review): Miosix uses the __ENABLE_XRAM macro to tell the startup code it wants XRAM
 //additionally, other boards may have the RAM connected in other ways, so
 //use this code only for the STM3220G_EVAL
 #if defined(__ENABLE_XRAM) && defined(_BOARD_STM3220G_EVAL)
@@ -104,14 +104,14 @@
 #endif /* VECT_TAB_SRAM */
 #endif /* USER_VECT_TAB_ADDRESS */
 
-//By TFT -- begin
+//By (Omitted for blind review) -- begin
 // the smartwatch has a bootloader
 #ifdef _BOARD_SONY_NEWMAN
 #define USER_VECT_TAB_ADDRESS
 #define VECT_TAB_BASE_ADDRESS  FLASH_BASE
 #define VECT_TAB_OFFSET        0x40000
 #endif //_BOARD_SONY_NEWMAN
-//By TFT -- end
+//By (Omitted for blind review) -- end
 
 /******************************************************************************/
 
@@ -270,7 +270,7 @@ void SystemCoreClockUpdate(void)
   SystemCoreClock >>= tmp;
 }
 
-//By TFT -- begin
+//By (Omitted for blind review) -- begin
 // this was backported from an older version. Now this code seems to be
 // moved in a function called HAL_something...
 /**
@@ -288,7 +288,7 @@ static void SetSysClock(void)
 /******************************************************************************/
   uint32_t StartUpCounter = 0, HSEStatus = 0;
 
-  //By TFT -- begin
+  //By (Omitted for blind review) -- begin
   // this was backported from an older version. Now this code seems to be
   // moved in a function called HAL_something...
   /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N */
@@ -302,7 +302,7 @@ static void SetSysClock(void)
   constexpr unsigned int PLL_N=240;
   constexpr unsigned int PLL_P=2;
   constexpr unsigned int PLL_Q=5;
-  //By TFT -- end
+  //By (Omitted for blind review) -- end
   
   /* Enable HSE */
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);
@@ -326,7 +326,7 @@ static void SetSysClock(void)
   if (HSEStatus == (uint32_t)0x01)
   {
     #ifdef _BOARD_SONY_NEWMAN
-    //By TFT: We don't know how the clock is configured by the bootloader,
+    //By (Omitted for blind review): We don't know how the clock is configured by the bootloader,
     //so better switch to the HSE and disable the PLL.
     unsigned int temp=RCC->CFGR;
     temp &= ~RCC_CFGR_SW;  /* Clear SW[1:0] bits */
@@ -361,7 +361,7 @@ static void SetSysClock(void)
 #ifndef _BOARD_SONY_NEWMAN
     FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN | FLASH_ACR_DCEN | FLASH_ACR_LATENCY_3WS;
 #else //_BOARD_SONY_NEWMAN
-    //By TFT: Three wait states seem to make it unstable (crashing) when CPU load is high
+    //By (Omitted for blind review): Three wait states seem to make it unstable (crashing) when CPU load is high
     FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN | FLASH_ACR_DCEN | FLASH_ACR_LATENCY_7WS;
 #endif //_BOARD_SONY_NEWMAN
     
@@ -379,7 +379,7 @@ static void SetSysClock(void)
   }
 
 }
-// By TFT -- end
+// By (Omitted for blind review) -- end
 
 #ifdef DATA_IN_ExtSRAM
 /**

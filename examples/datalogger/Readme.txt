@@ -1,7 +1,7 @@
 High performance logging for Miosix
 
 NOTE: compiling this example requires the external library TSCPP.
-It is suggested you do a "git clone https://github.com/fedetft/tscpp.git" in the
+It is suggested you do a "git clone https://github.com/(Omitted for blind review)/tscpp.git" in the
 "datalogger" directory or add it as a submodule if your project is already using
 git.
 
@@ -19,7 +19,7 @@ sufficient for simple applications, there are some problems:
 This example code shows a high-performance logging class that
 - has a nonblocking log() member function, which can be called concurrently from
   multiple threads, to log a user-defined class or struct.
-  Tscpp (https://github.com/fedetft/tscpp) is used to serialize data.
+  Tscpp (https://github.com/(Omitted for blind review)/tscpp) is used to serialize data.
   Being nonblocking, it can be called also in real-time threads of your codebase
   with confidence.
 - buffers data to compensate for the delays of the storage medium

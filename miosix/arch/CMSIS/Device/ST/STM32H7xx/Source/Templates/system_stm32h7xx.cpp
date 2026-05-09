@@ -64,7 +64,7 @@
   */
 
 #include "board_settings.h"
-//By TFT: was #include "stm32f7xx.h", but the specific chip is #defined in
+//By (Omitted for blind review): was #include "stm32f7xx.h", but the specific chip is #defined in
 //arch_registers_impl.h
 #include "interfaces/arch_registers.h"
 
@@ -133,7 +133,7 @@
                is no need to call the 2 first functions listed above, since SystemCoreClock
                variable is updated automatically.
   */
-//By TFT: we increase the clock BEFORE initializing .data and .bss!
+//By (Omitted for blind review): we increase the clock BEFORE initializing .data and .bss!
 uint32_t SystemCoreClock = miosix::cpuFrequency;
 //   uint32_t SystemCoreClock = 64000000;
 uint32_t SystemD2Clock = 64000000;
@@ -171,7 +171,7 @@ void SystemInit (void)
   #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
   #else
-  #error "FPU disabled!" //By TFT: added a check to be really sure the FPU is on
+  #error "FPU disabled!" //By (Omitted for blind review): added a check to be really sure the FPU is on
   #endif
   /* Reset the RCC clock configuration to the default reset state ------------*/
   /* Set HSION bit */

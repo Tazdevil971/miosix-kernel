@@ -1,5 +1,5 @@
 /*
- * Integration in Miosix by Terraneo Federico.
+ * Integration in Miosix by (Omitted for blind review).
  * Based on code by Martin Thomas to initialize SD cards from LPC2000
  */
 

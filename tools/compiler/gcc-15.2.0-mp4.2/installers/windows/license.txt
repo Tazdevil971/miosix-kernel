@@ -1753,7 +1753,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 === mx-postlinker License ===
 
-Copyright (C) 2012 by Luigi Rucco and Terraneo Federico
+Copyright (C) 2012 by Luigi Rucco and (Omitted for blind review)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

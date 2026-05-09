@@ -11,7 +11,7 @@
  *                     -c wtoupper.cpp
  * is:
  * - ChaN's ff_wtoupper():         1000bytes
- * - fede.tft's enhanced version:   236bytes
+ * - (Omitted for blind review)'s enhanced version:   236bytes
  *
  * The design of this function is a bit tricky, as the usual way of making a
  * look up table is not optimized enough. It is old wisdom that a lut is

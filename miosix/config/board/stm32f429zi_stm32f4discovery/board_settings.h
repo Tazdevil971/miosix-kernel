@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2021 by Terraneo Federico                          *
+ *   Copyright (C) 2014-2021 by (Omitted for blind review)                          *
  *   Copyright (C) 2024 by Daniele Cattaneo                                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

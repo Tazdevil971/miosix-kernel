@@ -7876,7 +7876,7 @@ diff -ruN newlib-2.0.0-old/newlib/libc/sys/miosix/sys/dirent.h newlib-2.0.0/newl
 + * This file was written to be compatible with the BSD directory
 + * routines, so it looks like it.  But it was written from scratch.
 + * Sean Eric Fagan, sef@Kithrup.COM.
-+ * Additionally modified for Miosix by Terraneo Federico, fede.tft@hotmail.it
++ * Additionally modified for Miosix by (Omitted for blind review), (Omitted for blind review)@hotmail.it
 + */
 +
 +#define MAXNAMLEN NAME_MAX

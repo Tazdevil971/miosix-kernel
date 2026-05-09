@@ -92,7 +92,7 @@
 /   1    - ASCII (Valid for only non-LFN cfg.)
 */
 
-//Note by TFT: DEF_NAMEBUF is used in the following functions: f_open(),
+//Note By (Omitted for blind review): DEF_NAMEBUF is used in the following functions: f_open(),
 //f_opendir(), f_readdir(), f_stat(), f_unlink(), f_mkdir(), f_chmod(),
 //f_utime(), f_rename(), and Miosix always locks a mutex before calling any of,
 //these. For this reason it was chosen to allocate the LFN buffer statically,
@@ -113,7 +113,7 @@
 /  buffer, memory management functions, ff_memalloc() and ff_memfree(), must be added
 /  to the project. */
 
-//Note by TFT: we do want unicode and not ancient code pages
+//Note By (Omitted for blind review): we do want unicode and not ancient code pages
 #define	_LFN_UNICODE	1	/* 0:ANSI/OEM or 1:Unicode */
 /* To switch the character encoding on the FatFs API to Unicode, enable LFN feature
 /  and set _LFN_UNICODE to 1. */
@@ -196,7 +196,7 @@
 /* A header file that defines sync object types on the O/S, such as
 /  windows.h, ucos_ii.h and semphr.h, must be included prior to ff.h. */
 
-//Note by TFT: the reentrant option uses just one big lock for each FATFS, so
+//Note By (Omitted for blind review): the reentrant option uses just one big lock for each FATFS, so
 //given there's no concurrency advantage in using this option, we're just using
 //an ordinary KernelMutex in class Fat32Fs and locking it before calling FatFs.
 #define _FS_REENTRANT	0		/* 0:Disable or 1:Enable */
@@ -210,7 +210,7 @@
 /      ff_req_grant(), ff_rel_grant(), ff_del_syncobj() and ff_cre_syncobj()
 /      function must be added to the project. */
 
-//Note by TFT: this is very useful, as it avoids the danger of opening the same
+//Note By (Omitted for blind review): this is very useful, as it avoids the danger of opening the same
 //file for writing multiple times
 #define	_FS_LOCK	/* 0:Disable or >=1:Enable */
 /* To enable file lock control feature, set _FS_LOCK to 1 or greater.

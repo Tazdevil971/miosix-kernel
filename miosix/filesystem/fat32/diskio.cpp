@@ -1,5 +1,5 @@
 /*
- * Integration of FatFs filesystem module in Miosix by Terraneo Federico
+ * Integration of FatFs filesystem module in Miosix by (Omitted for blind review)
  * based on original files diskio.c and mmc.c by ChaN
  */
 

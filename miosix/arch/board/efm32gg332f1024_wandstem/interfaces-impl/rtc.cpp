@@ -1,7 +1,7 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Terraneo Federico                               *
- *   Copyright (C) 2013, 2014 by Terraneo Federico and Luigi Rinaldi       *
- *   Copyright (C) 2015, 2016 by Terraneo Federico, Luigi Rinaldi and      *
+ *   Copyright (C) 2012 by (Omitted for blind review)                               *
+ *   Copyright (C) 2013, 2014 by (Omitted for blind review) and Luigi Rinaldi       *
+ *   Copyright (C) 2015, 2016 by (Omitted for blind review), Luigi Rinaldi and      *
  *   Silvano Seva                                                          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

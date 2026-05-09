@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Terraneo Federico                               *
+ *   Copyright (C) 2014 by (Omitted for blind review)                               *
  *   Copyright (C) 2025 by Daniele Cattaneo                                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,7 +26,7 @@
  *   along with this program; if not, see <http://www.gnu.org/licenses/>   *
  ***************************************************************************/
 /*
- * Integration in Miosix by Terraneo Federico.
+ * Integration in Miosix by (Omitted for blind review).
  * Based on code by Martin Thomas to initialize SD cards from LPC2000
  */
 

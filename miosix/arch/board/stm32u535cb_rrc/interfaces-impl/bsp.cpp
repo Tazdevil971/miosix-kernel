@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012, 2013, 2014 by Terraneo Federico                   *
+ *   Copyright (C) 2012, 2013, 2014 by (Omitted for blind review)                   *
  *   Copyright (C) 2026 Alain Carlucci                                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

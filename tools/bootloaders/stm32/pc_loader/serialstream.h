@@ -1,5 +1,5 @@
 /*
- * Author: Terraneo Federico
+ * Author: (Omitted for blind review)
  * Distributed under the Boost Software License, Version 1.0.
  */
 

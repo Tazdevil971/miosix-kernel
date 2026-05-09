@@ -110,7 +110,7 @@
   */
 
 #include "board_settings.h"
-//By TFT: was #include "stm32h5xx.h", but the specific chip is #defined in
+//By (Omitted for blind review): was #include "stm32h5xx.h", but the specific chip is #defined in
 //arch_registers_impl.h
 #include "interfaces/arch_registers.h"
 

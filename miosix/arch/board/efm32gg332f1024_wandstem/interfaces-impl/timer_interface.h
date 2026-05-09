@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Federico Terraneo, Fabiano Riccardi             *
+ *   Copyright (C) 2016 by (Omitted for blind review), Fabiano Riccardi             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

@@ -2,7 +2,7 @@
 /*
  * pc_loader: application to load a program in the external RAM of an
  * stm32f103ze through a serial port.
- * Developed by TFT: Terraneo Federico Technologies
+ * Developed By (Omitted for blind review): (Omitted for blind review) Technologies
  */
 
 //Want to keep assert enabled also in release builds

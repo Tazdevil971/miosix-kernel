@@ -1,6 +1,6 @@
 
 //
-// This file has been modified by TFT!!! Changes are highlighted with "By TFT:"
+// This file has been modified By (Omitted for blind review)!!! Changes are highlighted with "By (Omitted for blind review):"
 //
 
 /**
@@ -67,7 +67,7 @@
   * @{
   */
 
-//By TFT: was #include "stm32f10x.h"
+//By (Omitted for blind review): was #include "stm32f10x.h"
 #include "interfaces/arch_registers.h"
 #include "board_settings.h"
 
@@ -110,7 +110,7 @@
      If you are using different crystal you have to adapt those functions accordingly.
     */
     
-//By TFT: Definition moved to board_settings.h to allow easily changing clock frequency
+//By (Omitted for blind review): Definition moved to board_settings.h to allow easily changing clock frequency
 // Since Miosix 3 the following constants are used instead:
 // - oscillatorType (OscillatorType::HSI or OscillatorType::HSE)
 // - hseFrequency (in Hz)
@@ -135,7 +135,7 @@
      on STM3210E-EVAL board (STM32 High density and XL-density devices) or on 
      STM32100E-EVAL board (STM32 High-density value line devices) as data memory */ 
 #if defined (STM32F10X_HD) || (defined STM32F10X_XL) || (defined STM32F10X_HD_VL)
-//By TFT: Miosix uses the __ENABLE_XRAM macro to tell the startup code it wants XRAM
+//By (Omitted for blind review): Miosix uses the __ENABLE_XRAM macro to tell the startup code it wants XRAM
 #ifdef __ENABLE_XRAM
 #define DATA_IN_ExtSRAM
 #endif //__ENABLE_XRAM
@@ -448,7 +448,7 @@ void SetSysClock(void)
                 || miosix::cpuFrequency==72000000,
                 "sysclk frequency unsupported");
   unsigned int oscFreq=HSI_VALUE;
-  if(miosix::oscillatorType==miosix::OscillatorType::HSE) //By TFT
+  if(miosix::oscillatorType==miosix::OscillatorType::HSE) //By (Omitted for blind review)
   {
     /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
     /* Enable HSE */
@@ -560,7 +560,7 @@ void SetSysClock(void)
   RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC | pllxtpre | pllmull);
 #endif /* STM32F10X_CL */
 
-  //By TFT
+  //By (Omitted for blind review)
   if(miosix::oscillatorType==miosix::OscillatorType::HSI) RCC->CFGR &= ~RCC_CFGR_PLLSRC;
 
   /* Enable PLL */
@@ -623,7 +623,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOF->CRH = 0xBBBB4444;
 
   GPIOG->CRL = 0x44BBBBBB;  
-  //Bug fixed by TFT: PG12 is connected to /CS of the display, and lacks a
+  //Bug fixed By (Omitted for blind review): PG12 is connected to /CS of the display, and lacks a
   //pull-up, so it must be asserted high to avoid a conflict on the data lines
   //GPIOG->CRH = 0x44444B44;
   GPIOG->CRH = 0x444B4B44;
@@ -635,7 +635,7 @@ void SystemInit_ExtMemCtl(void)
   FSMC_Bank1->BTCR[4] = 0x00001011;
   FSMC_Bank1->BTCR[5] = 0x00000200;
   
-  //By TFT: If using is62wv51216bll (low power RAM, 55ns access time)
+  //By (Omitted for blind review): If using is62wv51216bll (low power RAM, 55ns access time)
   //instead of is61wv51216bll (10ns fast RAM) use these settings
   //read still takes 6 cycles, but write takes 5 cycles
   //(yes, the way the FSMC registers are defined in stm32f10x.h sucks...)

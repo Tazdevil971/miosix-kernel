@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2018-2024 by Terraneo Federico, Daniele Marsella        *
+ *   Copyright (C) 2018-2024 by (Omitted for blind review), Daniele Marsella        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

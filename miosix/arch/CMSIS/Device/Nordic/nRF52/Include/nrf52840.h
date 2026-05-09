@@ -153,7 +153,7 @@ typedef enum {
 
 /** @} */ /* End of group Configuration_of_CMSIS */
 
-#include <CMSIS/Include/core_cm4.h> //By TFT: fix path
+#include <CMSIS/Include/core_cm4.h> //By (Omitted for blind review): fix path
 
 // TODO: modified for Miosix: do we need this?
 // #include "system_nrf52840.h"                    /*!< nrf52840 System                                                           */

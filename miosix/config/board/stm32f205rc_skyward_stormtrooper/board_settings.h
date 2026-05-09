@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Terraneo Federico and Silvano Seva              *
+ *   Copyright (C) 2016 by (Omitted for blind review) and Silvano Seva              *
  *   for Skyward Experimental Rocketry                                     *
  *   Copyright (C) 2024 by Daniele Cattaneo                                *
  *                                                                         *

@@ -142,9 +142,4 @@ to build the kernel while directories marked with `[ ]` contain other stuff
 
 ## References
 
-[1] F. Terraneo and D. Cattaneo, "Fluid Kernels: Seamlessly Conquering the
-Embedded Computing Continuum," in IEEE Transactions on Computers, vol. 74,
-no. 12, Dec. 2025, doi: https://doi.org/10.1109/TC.2025.3605745.
-[2] M. Maggio, F. Terraneo, and A. Leva, "Task scheduling: A control-theoretical
-viewpoint for a general and flexible solution," in ACM Trans. Embed. Comput.
-Syst., vol. 13, no. 4, Nov. 2014, doi: https://doi.org/10.1145/2560015.
+(Omitted for blind review)

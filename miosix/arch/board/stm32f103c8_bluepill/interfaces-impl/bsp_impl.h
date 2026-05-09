@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011 by Terraneo Federico                               *
+ *   Copyright (C) 2011 by (Omitted for blind review)                               *
  *   Copyright (C) 2016 by Silvano Seva                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

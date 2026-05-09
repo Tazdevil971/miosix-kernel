@@ -5637,7 +5637,7 @@ typedef struct {
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
 typedef struct {
   GpioPort GPIO_PORT[3];       /**< \brief (GPIO Offset: 0x000) GpioPort groups [PORT_LENGTH] */
-} Gpio_; //By TFT: renamed as the name "Gpio" conflicts with Miosix drivers
+} Gpio_; //By (Omitted for blind review): renamed as the name "Gpio" conflicts with Miosix drivers
 
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

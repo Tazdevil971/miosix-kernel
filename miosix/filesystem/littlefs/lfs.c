@@ -3588,7 +3588,7 @@ relocate:
 static lfs_ssize_t lfs_file_rawwrite(lfs_t *lfs, lfs_file_t *file,
         const void *buffer, lfs_size_t size) {
 
-    //By TFT: if user code tries by mistake to write to a file opened for
+    //By (Omitted for blind review): if user code tries by mistake to write to a file opened for
     //reading, LitteFs reacts by crashing the kernel with an assert.
     //This is not acceptable. How about returning EBADF?
     //LFS_ASSERT((file->flags & LFS_O_WRONLY) == LFS_O_WRONLY);
@@ -3699,7 +3699,7 @@ static lfs_soff_t lfs_file_rawseek(lfs_t *lfs, lfs_file_t *file,
 
 #ifndef LFS_READONLY
 static int lfs_file_rawtruncate(lfs_t *lfs, lfs_file_t *file, lfs_off_t size) {
-    //By TFT: if user code tries by mistake to truncate to a file opened for
+    //By (Omitted for blind review): if user code tries by mistake to truncate to a file opened for
     //reading, LitteFs reacts by crashing the kernel with an assert.
     //This is not acceptable. How about returning EBADF?
     //LFS_ASSERT((file->flags & LFS_O_WRONLY) == LFS_O_WRONLY);

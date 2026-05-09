@@ -157,7 +157,7 @@ typedef enum
   * @}
   */
 
-#include <CMSIS/Include/core_cm3.h> //By TFT: fix path
+#include <CMSIS/Include/core_cm3.h> //By (Omitted for blind review): fix path
 #include "system_stm32f2xx.h"
 #include <stdint.h>
 

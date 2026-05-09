@@ -38,7 +38,7 @@ void loggerDemo(void*)
      * - log data from multiple threads while being nonblocking
      * - log different classes/structs in any order, provided their serialized
      *   size is less than maxRecordSize and that they meet the requirements
-     *   to be serialized with tscpp (github.com/fedetft/tscpp)
+     *   to be serialized with tscpp (github.com/(Omitted for blind review)/tscpp)
      */
     auto& logger=Logger::instance();
     logger.start();

@@ -392,7 +392,7 @@ void SetSysClock(void)
   RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLMUL));
   RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC | ((pllmul-2)<<RCC_CFGR_PLLMUL_Pos));
 
-  //By TFT
+  //By (Omitted for blind review)
   if(miosix::oscillatorType==miosix::OscillatorType::HSI) RCC->CFGR &= ~RCC_CFGR_PLLSRC;
 
   /* Enable PLL */

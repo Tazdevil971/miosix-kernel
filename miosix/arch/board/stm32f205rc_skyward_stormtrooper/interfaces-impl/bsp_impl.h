@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 by Terraneo Federico and Silvano Seva for          *
+ *   Copyright (C) 2016 by (Omitted for blind review) and Silvano Seva for          *
  *   Skyward Experimental Rocketry                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

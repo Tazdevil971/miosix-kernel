@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012, 2013, 2014 by Terraneo Federico and               *
+ *   Copyright (C) 2012, 2013, 2014 by (Omitted for blind review) and               *
  *                                     Marsella Daniele                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

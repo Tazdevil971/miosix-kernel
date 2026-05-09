@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015-2021 by Terraneo Federico, Sasan Golchin           *
+ *   Copyright (C) 2015-2021 by (Omitted for blind review), Sasan Golchin           *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

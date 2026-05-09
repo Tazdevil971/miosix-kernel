@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2023 by Federico Terraneo                               *
+ *   Copyright (C) 2023 by (Omitted for blind review)                               *
  *   Copyright (C) 2023 by Daniele Cattaneo                                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

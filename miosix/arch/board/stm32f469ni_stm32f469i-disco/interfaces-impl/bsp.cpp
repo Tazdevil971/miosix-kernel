@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Terraneo Federico                               *
+ *   Copyright (C) 2014 by (Omitted for blind review)                               *
  *   Copyright (C) 2017 by Federico Amedeo Izzo                            *
  *   Copyright (C) 2024 by Daniele Cattaneo                                *
  *                                                                         *

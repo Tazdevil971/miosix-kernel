@@ -280,14 +280,14 @@ typedef struct _DeviceVectors
   void* pfnReserved79;
 } DeviceVectors;
 
-//By TFT: removed prototyped of handler functions as in Miosix they are C++
+//By (Omitted for blind review): removed prototyped of handler functions as in Miosix they are C++
 //functions, and declaring them here in an extern "C" context messes up the linker
 
 /*
  * \brief Configuration of the Cortex-M4 Processor and Core Peripherals
  */
 
-//#define LITTLE_ENDIAN          1 //By TFT: removed as conflicts with a #define in newlib
+//#define LITTLE_ENDIAN          1 //By (Omitted for blind review): removed as conflicts with a #define in newlib
 #define __BB_PRESENT           0         /*!< BIT_BANDING present or not */
 #define __CLKGATE_PRESENT      1         /*!< CLKGATE present or not */
 #define __CM4_REV              1         /*!< Core revision r0p1 */
@@ -304,7 +304,7 @@ typedef struct _DeviceVectors
  * \brief CMSIS includes
  */
 
-#include <CMSIS/Include/core_cm4.h> //By TFT: fix path
+#include <CMSIS/Include/core_cm4.h> //By (Omitted for blind review): fix path
 #if !defined DONT_USE_CMSIS_INIT
 #include "system_sam4l.h"
 #endif /* DONT_USE_CMSIS_INIT */

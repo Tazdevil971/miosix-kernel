@@ -211,7 +211,7 @@ typedef struct {
 	/*TCHAR*/char *lfname;			/* Pointer to the LFN buffer */
 	UINT 	lfsize;			/* Size of LFN buffer in TCHAR */
 #endif
-    unsigned int inode; //By TFT: support inodes
+    unsigned int inode; //By (Omitted for blind review): support inodes
 } FILINFO;
 
 

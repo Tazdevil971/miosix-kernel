@@ -109,7 +109,7 @@
 #include "ff.h"			/* Declarations of FatFs API */
 #include "diskio.h"		/* Declarations of disk I/O functions */
 
-// Added by TFT -- begin
+// Added By (Omitted for blind review) -- begin
 #include <string.h>
 #include <stdlib.h>
 #include <util/unicode.h>
@@ -140,7 +140,7 @@
  * returns 2.
  */
 #define INODE(x) ((x->sect<<4 | x->index % 16)<3) ? 2 : (x->sect<<4 | x->index % 16)
-// Added by TFT -- end
+// Added By (Omitted for blind review) -- end
 
 
 /*--------------------------------------------------------------------------
@@ -568,7 +568,7 @@ const BYTE ExCvt[] = _EXCVT;	/* Upper conversion table for extended characters *
 /* String functions                                                      */
 /*-----------------------------------------------------------------------*/
 
-// Added by TFT -- begin
+// Added By (Omitted for blind review) -- begin
 
 //Using newlib's version of memcpy, memset, memcmp and strchr which are
 //performance optimized, while these are size optimized ones.
@@ -622,7 +622,7 @@ int chk_chr (const char* str, int chr) {
     else return 0;
 }
 
-// Added by TFT -- end
+// Added By (Omitted for blind review) -- end
 
 
 /*-----------------------------------------------------------------------*/
@@ -2013,7 +2013,7 @@ void get_fileinfo (		/* No return code */
 		}
 		pp[i] = 0;	/* Terminate LFN string by a \0 */
         
-        //By TFT: unlike plain FatFs we always want to fill lfname with an
+        //By (Omitted for blind review): unlike plain FatFs we always want to fill lfname with an
         //utf8-encoded file name. If there is no lfn (or is too long or
         //otherwise broken), then take the sfn (which is utf16) and copy it to
         //lfname, converting it to utf8 in the process
@@ -2042,7 +2042,7 @@ void get_fileinfo (		/* No return code */
 /* Get logical drive number from path name                               */
 /*-----------------------------------------------------------------------*/
 
-//By TFT: We don't want this reminiscence of microsoft OSes identifying
+//By (Omitted for blind review): We don't want this reminiscence of microsoft OSes identifying
 //drive numbers with 0:/path/to/file
 // static
 // int get_ldnumber (		/* Returns logical drive number (-1:invalid drive) */
@@ -2168,7 +2168,7 @@ BYTE check_fs (	/* 0:FAT boor sector, 1:Valid boor sector but not FAT, 2:Not a b
 
 static
 FRESULT find_volume (	/* FR_OK(0): successful, !=0: any error occurred */
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	/*FATFS** rfs,*/		/* Pointer to pointer to the found file system object */
 	/*const TCHAR** path,*/	/* Pointer to pointer to the path name (drive number) */
 	BYTE wmode			/* !=0: Check write protection for write access */
@@ -2417,7 +2417,7 @@ FRESULT f_mount (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_open (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	FIL* fp,			/* Pointer to the blank file object */
 	const /*TCHAR*/char *path,	/* Pointer to the file name */
 	BYTE mode			/* Access mode and file open mode flags */
@@ -2888,7 +2888,7 @@ FRESULT f_chdrive (
 
 
 FRESULT f_chdir (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const TCHAR* path	/* Pointer to the directory path */
 )
 {
@@ -2923,7 +2923,7 @@ FRESULT f_chdir (
 
 #if _FS_RPATH >= 2
 FRESULT f_getcwd (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	TCHAR* buff,	/* Pointer to the directory path */
 	UINT len		/* Size of path */
 )
@@ -3166,7 +3166,7 @@ FRESULT f_lseek (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_opendir (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	DIR_* dp,			/* Pointer to directory object to create */
 	const /*TCHAR*/char *path	/* Pointer to the directory path */
 )
@@ -3293,7 +3293,7 @@ FRESULT f_readdir (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_stat (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path,	/* Pointer to the file path */
 	FILINFO* fno		/* Pointer to file information to return */
 )
@@ -3330,7 +3330,7 @@ FRESULT f_stat (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_getfree (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	/*const TCHAR* path,*/	/* Path name of the logical drive number */
 	DWORD* nclst		/* Pointer to a variable to return number of free clusters */
 	/*FATFS** fatfs*/		/* Pointer to return pointer to corresponding file system object */
@@ -3454,7 +3454,7 @@ FRESULT f_truncate (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_unlink (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path		/* Pointer to the file or directory path */
 )
 {
@@ -3526,7 +3526,7 @@ FRESULT f_unlink (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_mkdir (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path		/* Pointer to the directory path */
 )
 {
@@ -3602,7 +3602,7 @@ FRESULT f_mkdir (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_chmod (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path,	/* Pointer to the file path */
 	BYTE value,			/* Attribute bits */
 	BYTE mask			/* Attribute mask to change */
@@ -3647,7 +3647,7 @@ FRESULT f_chmod (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_utime (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path,	/* Pointer to the file/directory name */
 	const FILINFO* fno	/* Pointer to the time stamp to be set */
 )
@@ -3691,7 +3691,7 @@ FRESULT f_utime (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_rename (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const /*TCHAR*/char *path_old,	/* Pointer to the old name */
 	const /*TCHAR*/char *path_new	/* Pointer to the new name */
 )
@@ -3774,7 +3774,7 @@ FRESULT f_rename (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_getlabel (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const TCHAR* path,	/* Path name of the logical drive number */
 	TCHAR* label,		/* Pointer to a buffer to return the volume label */
 	DWORD* sn			/* Pointer to a variable to return the volume serial number */
@@ -3841,7 +3841,7 @@ FRESULT f_getlabel (
 /*-----------------------------------------------------------------------*/
 
 FRESULT f_setlabel (
-    FATFS *fs,          /* By TFT: added to get rid of static variables */
+    FATFS *fs,          /* By (Omitted for blind review): added to get rid of static variables */
 	const TCHAR* label	/* Pointer to the volume label to set */
 )
 {

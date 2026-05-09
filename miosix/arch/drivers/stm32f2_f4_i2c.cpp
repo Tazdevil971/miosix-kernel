@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2022 by Terraneo Federico and Silvano Seva         *
+ *   Copyright (C) 2013-2022 by (Omitted for blind review) and Silvano Seva         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

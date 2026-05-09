@@ -437,7 +437,7 @@ constexpr RCCPLLConfig findPllConfig()
   */
 static void SetSysClock(void)
 {
-  uint32_t StartUpCounter = 0, HSEStatus = 0x01; //By TFT: was 0
+  uint32_t StartUpCounter = 0, HSEStatus = 0x01; //By (Omitted for blind review): was 0
   (void)StartUpCounter;
   
   if(oscillatorType==OscillatorType::HSE) HSEStatus = EnableHSE();

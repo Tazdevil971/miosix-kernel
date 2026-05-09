@@ -63,13 +63,13 @@
   * @{
   */
 
-//By TFT: was #include "stm32f4xx_hal.h", but the specific chip is #defined in
+//By (Omitted for blind review): was #include "stm32f4xx_hal.h", but the specific chip is #defined in
 //arch_registers_impl.h
 #include "board_settings.h"
 #include "interfaces/arch_registers.h"
-//By TFT: the .h file for the chip used to define this
+//By (Omitted for blind review): the .h file for the chip used to define this
 #define HSI_VALUE 16000000
-//By TFT: was in the old stm32f4xx.h
+//By (Omitted for blind review): was in the old stm32f4xx.h
 #define HSE_STARTUP_TIMEOUT    ((uint16_t)0x0500)
 
 /**
@@ -132,7 +132,7 @@
                is no need to call the 2 first functions listed above, since SystemCoreClock
                variable is updated automatically.
   */
-//By TFT: we increase the clock BEFORE initializing .data and .bss!
+//By (Omitted for blind review): we increase the clock BEFORE initializing .data and .bss!
 uint32_t SystemCoreClock = miosix::cpuFrequency;
 const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
 
@@ -170,7 +170,7 @@ void SystemInit(void)
   #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
   #else
-  #error "FPU disabled!" //By TFT: added a check to be really sure the FPU is on
+  #error "FPU disabled!" //By (Omitted for blind review): added a check to be really sure the FPU is on
   #endif
 
   /* Reset the RCC clock configuration to the default reset state ------------*/
@@ -292,7 +292,7 @@ void SystemCoreClockUpdate(void)
   SystemCoreClock >>= tmp;
 }
 
-//By TFT -- begin
+//By (Omitted for blind review) -- begin
 // this was backported from an older version. Now this code seems to be
 // moved in a function called HAL_something...
 /**
@@ -310,7 +310,7 @@ static void SetSysClock(void)
 /******************************************************************************/
   uint32_t StartUpCounter = 0, HSEStatus = 0;
 
-  // By TFT -- begin
+  // By (Omitted for blind review) -- begin
   // this was backported from an older version. Now this code seems to be
   // moved in a function called HAL_something...
   static_assert(miosix::oscillatorType==miosix::OscillatorType::HSE,
@@ -325,7 +325,7 @@ static void SetSysClock(void)
   if(sysclkMhz==180) PLL_Q=8; // 48MHz output will be 45MHz
   else if(sysclkMhz==100) PLL_Q=5; // 48MHz output will be 40MHz
   else PLL_Q=PLL_N/48;
-  // By TFT -- end
+  // By (Omitted for blind review) -- end
   
   /* Enable HSE */
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);
@@ -417,7 +417,7 @@ static void SetSysClock(void)
   }
 
 }
-// By TFT -- end
+// By (Omitted for blind review) -- end
 
 // #if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
 // /**
@@ -434,7 +434,7 @@ static void SetSysClock(void)
 // #if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)
 // #if defined (DATA_IN_ExtSDRAM)
 //   register uint32_t tmpreg = 0, timeout = 0xFFFF;
-//   //By TFT: added volatile otherwise GCC removes the delay loop, but why is there a delay
+//   //By (Omitted for blind review): added volatile otherwise GCC removes the delay loop, but why is there a delay
 //   //loop in the first place? TODO
 //   volatile register uint32_t index;
 //

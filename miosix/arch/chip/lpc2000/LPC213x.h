@@ -3,7 +3,7 @@
 /*  LPC213X.H:  Header file for Philips LPC2131/32/34/36/38            */
 /*                                                                     */
 /***********************************************************************/
-//Fixed a bug by TFT: INTWAKE is a short, not a char
+//Fixed a bug By (Omitted for blind review): INTWAKE is a short, not a char
 
 #ifndef __LPC213x_H
 #define __LPC213x_H

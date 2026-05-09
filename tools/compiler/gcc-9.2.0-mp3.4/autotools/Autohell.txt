@@ -71,7 +71,7 @@ But wait, there's more fail!
 The old autotools scripts fail to run with the new perl interpreter...
 
 $ automake --version
-Unescaped left brace in regex is illegal here in regex; marked by <-- HERE in m/\${ <-- HERE ([^ \t=:+{}]+)}/ at /home/fede/Documents/programmazione/miosix/newcompiler/compiler/autotools/autobins/bin/automake line 4159.
+Unescaped left brace in regex is illegal here in regex; marked by <-- HERE in m/\${ <-- HERE ([^ \t=:+{}]+)}/ at /home/(Omitted for blind review)/Documents/programmazione/miosix/newcompiler/compiler/autotools/autobins/bin/automake line 4159.
 
 If it does so, fix it like this:
 http://gnu-automake.7480.n7.nabble.com/bug-23602-Unescaped-left-brace-in-regex-is-deprecated-passed-through-in-regex-td22201.html

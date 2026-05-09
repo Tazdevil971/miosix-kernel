@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2008-2024 by Terraneo Federico                          *
- *   Copyright (C) 2025 by Terraneo Federico and Daniele Cattaneo          *
+ *   Copyright (C) 2008-2024 by (Omitted for blind review)                          *
+ *   Copyright (C) 2025 by (Omitted for blind review) and Daniele Cattaneo          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

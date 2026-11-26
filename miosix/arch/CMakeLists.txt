@@ -58,6 +58,7 @@ set(MIOSIX_BOARDS
     stm32f303vc_stm32f3discovery
     stm32f401re_nucleo
     stm32f401vc_stm32f4discovery
+    stm32f405rg_crazyflie_v2
     stm32f407vg_bitsboard
     stm32f407vg_stm32f4discovery
     stm32f407vg_thermal_test_chip
